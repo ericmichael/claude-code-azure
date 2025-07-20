@@ -147,7 +147,9 @@ class Tool(BaseModel):
     input_schema: Dict[str, Any]
 
 class ThinkingConfig(BaseModel):
-    enabled: bool
+    enabled: Optional[bool] = None
+    budget_tokens: Optional[int] = None
+    type: Optional[str] = None
 
 class MessagesRequest(BaseModel):
     model: str
